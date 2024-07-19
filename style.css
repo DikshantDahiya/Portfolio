@@ -285,7 +285,7 @@ section.skills .card-wrapper .card:hover h2, section.skproject .card-wrapper .ca
     height:100%;
     transform: translateX(-100%);
     left:50%;
-    background-color: var(--secondary);
+    background-color: var(--primary);
 
 }
 .timeline-item{
@@ -311,7 +311,7 @@ section.skills .card-wrapper .card:hover h2, section.skproject .card-wrapper .ca
 .timeline-dot{
     height: 21px;
     width: 21px;
-    background-color: var(--secondary);
+    background-color: var(--primary);
    
     position: absolute;
     left:100%;
@@ -322,7 +322,7 @@ section.skills .card-wrapper .card:hover h2, section.skproject .card-wrapper .ca
 .timeline-dot2{
     height: 21px;
     width: 21px;
-    background-color: var(--secondary);
+    background-color: var(--primary);
 
     position: absolute;
 
@@ -341,7 +341,7 @@ section.skills .card-wrapper .card:hover h2, section.skproject .card-wrapper .ca
 }
 .timeline-content{
     background-color: var(--dark);
-    border: 3px solid var(--dark);
+    border: 5px solid var(--primary);
     padding: 30px 50px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--dark);
@@ -504,6 +504,7 @@ section.project .card-wrapper{
 section.project .card-wrapper .card{
     background:var(--pure);
     box-shadow: rgb(163, 167, 171) 20px 20px 25px -10px;
+    transition: transform .5s;
 }
 section.project .card-wrapper .card .img-wrapper img{
     width:100%;
@@ -525,6 +526,9 @@ section.project .card-wrapper .card .card-content a{
 }
 section.project .card-wrapper .card .card-content a:hover{
     color:var(--primary);
+}
+section.project .card-wrapper .card:hover{
+    transform:translateY(-1rem);
 }
 section.project .card-wrapper .card .card-content span{
    color:var(--ternary);
@@ -551,6 +555,11 @@ section.contact .card-wrapper .card{
 section.contact .card-wrapper .card img{
     width:120px;
     height:120px;
+    transition: transform .5s;
+    
+}
+section.contact .card-wrapper .card img:hover{
+    transform:translateY(-.7rem);
     
 }
 section.contact .card-wrapper .card h1{
@@ -723,6 +732,18 @@ footer .copyright{
     }
     section.project{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 97%, 0 100%);
+    }
+}
+@media (max-width:1000px){
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top:2rem;
+    }
+    .about .right .social{
+        justify-content: center;
     }
 }
 
